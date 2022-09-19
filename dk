@@ -1,0 +1,9 @@
+FROM python:3.9
+# set work directory
+WORKDIR C:\Users\дом\PycharmProjects\pythonProject1
+# copy project
+COPY  C:\Users\дом\PycharmProjects\pythonProject1
+# install dependencies
+RUN pip install --user aiogram
+# run app
+CMD ["python", "Rity.py"]

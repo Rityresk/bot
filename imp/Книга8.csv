@@ -1,0 +1,5 @@
+object;cx;cy;height;width;top;left;start_angle;stop_angle;r;rb;n
+portal;;;;;140;650;;;;;;
+circle;130;240;;;;;;;50;80;17
+circle;340;180;;;;;;;25;50;11
+circle;500;240;;;;;;;45;65;13

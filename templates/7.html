@@ -1,0 +1,28 @@
+{% extends "index.html" %}
+
+{% block content %}
+    <a href="/add_department" class="btn btn-secondary" style="margin-left: -47%; margin-top: 30px">
+            Добавить департамент
+        </a>
+     <a href="/" class="btn btn-secondary" style="margin-left: 20px; margin-top: 30px">
+            Работы
+        </a>
+    {% for user in a %}
+     <div style="margin-left: 10%; margin-top: 50px">
+              <h4>Department# {{ loop.index }}</h4>
+     <table border="1">
+     <tr><td>Title</td><td>Chief</td><td>Members</td><td>Email</td></tr>
+     <tr><td>{{user.title}}</td><td>{{s[loop.index0]}}</td><td>{{user.members}}</td><td>{{user.email}}</td></tr>
+     </table>
+      <div>
+        <a href="/department_red/{{ user.id }}" class="btn btn-warning">
+            Изменить
+        </a>
+        <a href="/department_delete/{{ user.id }}" class="btn btn-danger">
+            Удалить
+        </a>
+      </div>
+     </div>
+
+     {% endfor %}
+{% endblock %}

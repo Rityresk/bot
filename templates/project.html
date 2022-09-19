@@ -1,0 +1,13 @@
+{% extends "index.html" %}
+
+{% block content %}
+    {% for user in a %}
+        <table border="1">
+        <tr><td>{{user['name']}}</td></tr>
+        <tr><td><img src={{user['img']}}></td><td>{{user['notes']}}</td></tr>
+        </table>
+        <a href="/add/" class="btn btn-danger">
+            Отметить
+        </a>
+    {% endfor %}
+{% endblock %}

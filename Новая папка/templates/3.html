@@ -1,0 +1,33 @@
+{% extends "index.html" %}
+
+{% block content %}
+    <div>
+    <a href="/add_job" class="btn btn-secondary" style="margin-left: -47%; margin-top: 30px">
+            Добавить работу
+        </a>
+     <a href="/department" class="btn btn-secondary" style="margin-left: 20px; margin-top: 30px">
+            Департаменты
+        </a>
+     <a href="/category" class="btn btn-secondary" style="margin-left: 20px; margin-top: 30px">
+            Категории
+        </a>
+    </div>
+    {% for user in a %}
+     <div style="margin-left: 10%; margin-top: 50px">
+              <h4>Action# {{ loop.index }}</h4>
+     <table border="1">
+     <tr><td>Title</td><td>Team leader</td><td>Duration</td><td>Collaborators</td><td>Category</td><td>Is finished</td></tr>
+     <tr><td>{{user.job}}</td><td>{{s[loop.index0]}}</td><td>{{user.work_size}}</td><td>{{user.collaborators}}</td><td>{{user.category}}</td><td>{{user.is_finished}}</td></tr>
+     </table>
+      <div>
+        <a href="/job/{{ user.id }}" class="btn btn-warning">
+            Изменить
+        </a>
+        <a href="/job_delete/{{ user.id }}" class="btn btn-danger">
+            Удалить
+        </a>
+      </div>
+     </div>
+
+     {% endfor %}
+{% endblock %}

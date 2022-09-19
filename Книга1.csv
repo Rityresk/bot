@@ -1,0 +1,5 @@
+object;cx;cy;height;width;top;left;start_angle;stop_angle;r;rb;n
+rectangle;;;20;180;450;20;;;;;9
+rectangle;;;20;180;350;220;;;;;9
+rectangle;;;20;180;250;420;;;;;9
+portal;;;;;135;670;;;;;;
